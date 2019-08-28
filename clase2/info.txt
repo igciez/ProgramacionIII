@@ -1,0 +1,18 @@
+-----
+php:
+-----
+
+$_Get -> para tomar valores de la base de datos, se usa como intermediario "Postman"
+json_encore -> toma el string json y lo devuelve con el mismo formato.
+Json_decode -> se puede devolver en otro formato ????
+$_POST --> ????  nos permite recuperar datos enviados desde formularios con el método POST
+$_REQUEST --> obtiene los parametros
+$_COOKIE --> setear cookies
+$_SESSION -->debe iniciarse la variable global: session_start()
+$_SERVER['REQUEST_METHOD' ] //---> ????
+
+----------
+Programas:
+-----------
+Postman --> simula el cliente ?????
+Xampp

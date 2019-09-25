@@ -32,10 +32,18 @@ $app->delete('[/]',function (Request $request, Response $response){
 /**
  * Retorna objetos
  */
-$app->get('/datos/',function (Request $request, Response $response){
-    $datos= array('nombre'=> ' rogelio', ' apellido'=> 'agua', 'edad'=> 40);
+$app->get('/datos/{email}',function (Request $request, Response $response, $args){
+    //$auxEmail=$args['email'];
+    //$datos= array('nombre'=> ' rogelio', ' apellido'=> 'agua', 'edad'=> 40 , 'email'=> $auxEmail);
     $newResponse= $response->withJson($datos,200);
     return $newResponse;
+
+    /**
+     * Formas de request:
+     * ->geturl()
+     * ->getQueryParams()
+     * ->getQuery()
+     */
 });
 
 /**

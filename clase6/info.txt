@@ -1,0 +1,14 @@
+
+1) https://github.com/mauricioCerizza/Programacion_03/tree/master/Clases/Clase08/Clase08
+
+2) https://github.com/mauricioCerizza/Programacion_03/tree/master/Clases/Clase08/Clase06
+
+------
+Pasos:
+------
+
+1) crear: .htaccess -> para tener ruta relativa
+
+2) bajar "vendor" -> link: composer require slim/slim "^3.12"
+
+3) Generar clases.

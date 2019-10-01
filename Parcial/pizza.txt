@@ -1,0 +1,4 @@
+{"precio":"25","tipo":"molde","cantidad":"1","sabor":"muzza","imagenUno":"Tulips.jpg","imagenDos":"Lighthouse.jpg","id":"1"}
+{"precio":"25","tipo":"molde","cantidad":"1","sabor":"muzza","imagenUno":"Tulips.jpg","imagenDos":"Lighthouse.jpg","id":"2"}
+{"precio":"25","tipo":"piedra","cantidad":"1","sabor":"muzza","imagenUno":"Tulips.jpg","imagenDos":"Lighthouse.jpg","id":"3"}
+{"precio":"25","tipo":"piedra","cantidad":"1","sabor":"especial","imagenUno":"Tulips.jpg","imagenDos":"Lighthouse.jpg","id":"4"}

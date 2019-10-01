@@ -49,8 +49,10 @@ function borrar ($arrayLineas,$id,$foto){
 
                 if($foto["name"] !== $auxArray["foto"] ){
                     var_dump("./imagenes/".$auxArray["foto"]);
-                    //cambia de directorio la imagen vieja a backUpFotos.
-                    rename("./imagenes/".$auxArray["foto"], './backUpFotos/'.$auxArray["patente"].$auxArray["foto"]);
+                    //cambia de directorio la imagen vieja a backUpFotos, pero no la conserva.
+                    //rename("./imagenes/".$auxArray["foto"], './backUpFotos/'.$auxArray["patente"].$auxArray["foto"]);
+                    //cambia de directorio la imagen vieja a backUpFotos, pero la conserva en ambos directorios.
+                    copy("./imagenes/".$auxArray["foto"], './backUpFotos/'.$auxArray["patente"].$auxArray["foto"]);
                 }
                 unset($arrayLineas[$key]);
                 $valorRetornado=true;

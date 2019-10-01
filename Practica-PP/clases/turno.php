@@ -44,13 +44,12 @@ class Turno{
                 //si id ingresado no esta asignado a otro turno, obtengo los valores del vehiculo
                 foreach($arrayDeParametrosVehiculos as $key => $val){
                     $auxArrayVehiculos= (array)$val;
-                    //$valorRetornado=false;
+                    
                     if($auxArrayVehiculos){
-                        if($auxArrayVehiculos['patente']===$arrayDeParametros['patente']){
-                            $valorRetornado=true;                                    
+                        if($auxArrayVehiculos['patente']===$arrayDeParametros['patente']){                                 
                             foreach($arrayDeParametrosServicio as $key => $val){
                                 $auxArrayServicio= (array)$val;
-                                //$valorRetornado=false;
+                                
                                 if($auxArrayServicio){
                                     if($auxArrayServicio['id']===$arrayDeParametros['idServicio']){
                                         echo ('se guardo el obj');
@@ -66,11 +65,10 @@ class Turno{
                         }
                     }   
                 }
-            }                
-            
+            }
         }       
-        if($valorRetornado){
-            echo('no se pudo guardar: porque el obj esta repetido');
+        if(!$valorRetornado){
+            echo('no se pudo guardar, porque la patente o el id del servicio, no se encuentra');
         }       
     }
     /**

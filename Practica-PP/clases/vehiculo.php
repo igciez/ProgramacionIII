@@ -72,7 +72,7 @@ class Vehiculo{
                         strtolower($auxArray['marca'])===strtolower($arrayDeParametros['marca']) ){
                         $contador++;
                         $valorRetornado=true;
-                        echo('Ocurrencia '.$contador.':'.' Patente:'.$arrayDeParametros['patente'].' Marca:'.$arrayDeParametros['marca'].' Modelo:'.$arrayDeParametros['modelo']."\n");
+                        echo('Ocurrencia '.$contador.':'.' Patente:'.$auxArray['patente'].' Marca:'.$auxArray['marca'].' Modelo:'.$auxArray['modelo']."\n");
                     }
                 }   
             }

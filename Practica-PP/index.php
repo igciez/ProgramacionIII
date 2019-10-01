@@ -17,7 +17,7 @@ $app=new \Slim\App(["settings"=> $config]);
  *datos se guardan en el archivo de texto vehiculos.txt, 
  *tomando la patente como identificador(la patente no
  *puede estar repetida).
- * Add campo 'foto'!!!!
+ * campos: marca | modelo | patente | precio | foto
  */
 $app->post('/vehiculo/nuevo',function (Request $request, Response $response){
     $arrayDeParametros = $request->getParsedBody();
@@ -34,6 +34,7 @@ $app->post('/vehiculo/nuevo',function (Request $request, Response $response){
  *se retorna las ocurrencias, 
  *si no coincide se debe retornar “No existe xxx” (xxx es lo que se buscó) La búsqueda
  *tiene que ser case insensitive.
+ * campos: marca | modelo | patente
  */
 $app->get('/vehiculo/consulta',function (Request $request, Response $response){
     $arrayDeParametros = $request->getQueryParams();
@@ -47,6 +48,7 @@ $app->get('/vehiculo/consulta',function (Request $request, Response $response){
  * cargarTipoServicio(post): Se recibe el nombre del servicio a realizar: id, 
  * tipo(de los 10.000km, 20.000km, 50.000km), precio y demora, 
  * y se guardara en el archivo tiposServicio.txt.
+ * campos: id | tipo | percio | demora
  */
 $app->post('/servicio/nuevo',function (Request $request, Response $response){
     $arrayDeParametros = $request->getParsedBody();
@@ -60,6 +62,7 @@ $app->post('/servicio/nuevo',function (Request $request, Response $response){
  * sacarTurno (get): Se recibe patente y fecha (día) [idServicio] y se debe guardar en el archivo turnos.txt, 
  * fecha, patente, marca, modelo, precio y tipo de servicio. 
  * Si no hay cupo o la materia no existe informar cada caso particular.
+ * Campos: patente | idServicio
  */
 $app->get('/turno/nuevo',function (Request $request, Response $response){
     $arrayDeParametros = $request->getQueryParams();
@@ -82,10 +85,11 @@ $app->get('/turno/consulta',function (Request $request, Response $response){
 /**
  * inscripciones(get): Puede recibir el tipo de servicio o la fecha [cambio fecha por patente] y 
  * filtra la tabla de acuerdo al parámetro pasado.
+ * campos: tipoServicio | patente
  */
 $app->get('/turno/inscripciones',function (Request $request, Response $response){
     $arrayDeParametros = $request->getQueryParams();
-    $objeto = new Turno(); //-->cambio "fecha" por el campo "idServicio"
+    $objeto = new Turno(); 
     $objeto->inscripciones($arrayDeParametros);
     $newResponse='';
     return $newResponse;
@@ -95,6 +99,7 @@ $app->get('/turno/inscripciones',function (Request $request, Response $response)
  * modificarVehiculo(post): Debe poder modificar todos los datos del vehículo menos la patente y 
  * se debe cargar una imagen, si ya existía una guardar la foto antigua en la carpeta /backUpFotos , 
  * el nombre será patente y la fecha.
+ * campos: marca | modelo | patente | precio | foto
  */
 $app->post('/vehiculo/modificar',function (Request $request, Response $response){
     $arrayDeParametros = $request->getParsedBody();

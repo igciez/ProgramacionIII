@@ -60,33 +60,6 @@ function borrar ($arrayLineas,$id){
     return $arrayLineas;
 }
 
-/**
- * Modifica el array y 
- * lo devuelve
- */
-// function modificar($arrayAmodificar,$nombreArchivo){
-//     //obtengo el array
-//     $arrayObtenido= leer($nombreArchivo);
-//     //Obtengo el array sin el indice(id).
-//     if($arrayObtenido){
-//         $auxArrayIdBorrado= borrar($arrayObtenido,$arrayAmodificar['patente']);
-//     } 
-//     //var_dump($arrayAmodificar); 
-//     //var_dump($auxArrayIdBorrado); 
-//     //guardo todo de nuevo en el archivo.
-//     if($auxArrayIdBorrado){
-//         array_push($auxArrayIdBorrado, $arrayAmodificar);
-//         var_dump($auxArrayIdBorrado); 
-//         guardar($nombreArchivo, $auxArrayIdBorrado, "w");
-//         echo ("\n".'Se modifico el array correctamente.');
-//         //return $auxArrayIdBorrado;
-//     }
-//     else{
-//         echo ('No se pudo modificar el array!!!');
-//         //return null;
-//     }
-// }
-
 function BackUp(){
     //ToDo
 }

@@ -98,9 +98,9 @@ $app->get('/turno/inscripciones',function (Request $request, Response $response)
  */
 $app->post('/vehiculo/modificar',function (Request $request, Response $response){
     $arrayDeParametros = $request->getParsedBody();
-    $uploadedFiles = $request->getUploadedFiles();
+    $foto = $_FILES["foto"]; 
     $objeto = new Vehiculo();
-    $objeto->modificarVehiculo($arrayDeParametros,$uploadedFiles["foto"]);
+    $objeto->modificarVehiculo($arrayDeParametros,$foto);
     $newResponse = $response->withJson($objeto,200);
     return $newResponse;
 });

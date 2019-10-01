@@ -15,8 +15,15 @@ class Vehiculo{
         $this->modelo=$modelo;
         $this->patente=$patente;
         $this->precio=$precio;
-        $this->foto=$foto["name"];
-        move_uploaded_file($foto["tmp_name"],"./imagenes/".$this->foto);
+        
+        if($foto["name"]){
+            $this->foto=$foto["name"];
+            move_uploaded_file($foto["tmp_name"],"./imagenes/".$this->foto);
+        }
+        else{
+            $this->foto=$foto["foto"];
+        }
+        
     }
 
     function cargarVehiculo($arrayDeParametros,$uploadedFiles){
@@ -75,19 +82,19 @@ class Vehiculo{
         }
     }
 
-    function modificarVehiculo($arrayDeParametros, $uploadedFiles){
+    function modificarVehiculo($arrayDeParametros, $foto){
         $nombreArchivo="vehiculos.txt";    
         //obtengo el array
         $arrayObtenido= leer($nombreArchivo);
         //Obtengo el array sin el indice(id).
         if($arrayObtenido){
-            $auxArrayIdBorrado= borrar($arrayObtenido,$arrayDeParametros['patente']);
+            $auxArrayIdBorrado= borrar($arrayObtenido,$arrayDeParametros['patente'], $foto);
         }  
         //guardo todo de nuevo en el archivo.
         if($auxArrayIdBorrado){            
-            $this->_construct($arrayDeParametros['marca'],$arrayDeParametros['modelo'],$arrayDeParametros['patente'],$arrayDeParametros['precio'],$uploadedFiles); 
+            $this->_construct($arrayDeParametros['marca'],$arrayDeParametros['modelo'],$arrayDeParametros['patente'],$arrayDeParametros['precio'],$foto); 
             guardar("vehiculos.txt", $this, "w");
-            
+
             foreach ($auxArrayIdBorrado as $key => $auxArray) {
                 $value= (array)$auxArray;
                 $this->_construct($value['marca'],$value['modelo'],$value['patente'],$value['precio'],$value);                

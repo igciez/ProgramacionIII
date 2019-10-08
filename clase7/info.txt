@@ -1,0 +1,24 @@
+----------
+Pasos: sql
+----------
+
+1) Xampp -> activar apache y mySql
+
+2)http://localhost/phpmyadmin/
+
+3) Base de datos -> nombre(base de datos) :tabla_db
+		-> codificacion: utf8_spanish2_ci
+
+4)Nombre(de tabla): alumnos
+
+5) campos:
+id-> int->indice (primary) -> A_I (marcar casillero)
+nombre->vachar
+
+6)relacionar por los campos, a dos tablas: se usa "Primary Key": (en la pestaña SQL)
+
+SELECT a.id, a.nombre, m.nombre
+FROM `alumnos` a 
+INNER JOIN `materias` m on a.materias = m.id  
+
+*NOTA: `alumnos` a -> "a" es el alias de alumnos

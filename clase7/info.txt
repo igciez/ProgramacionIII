@@ -22,3 +22,10 @@ FROM `alumnos` a
 INNER JOIN `materias` m on a.materias = m.id  
 
 *NOTA: `alumnos` a -> "a" es el alias de alumnos
+
+7)Construir una tabla intermedia, mas: "alumno_materia"
+id_alumnos -
+            |_Primari Key
+id_materias-
+
+8) relacionar las tres tablas: usar el INNER (buscar en internet)

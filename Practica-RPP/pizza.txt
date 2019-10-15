@@ -1,0 +1,4 @@
+{"tipo":"molde","cantidad":"1","sabor":"jamon","precio":"125","imagenUno":"Chrysanthemum.jpg","imagenDos":"Desert.jpg","id":1}
+{"tipo":"molde","cantidad":"5","sabor":"muzza","precio":"125","imagenUno":"Chrysanthemum.jpg","imagenDos":"Desert.jpg","id":2}
+
+{"tipo":"piedra","cantidad":"55","sabor":"muzza","precio":"130","imagenUno":"piedra3Chrysanthemum.jpg","imagenDos":"muzza3Desert.jpg","id":3}

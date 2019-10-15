@@ -1,0 +1,2 @@
+{"tipo":"molde","cantidad":"20","sabor":"muzza","precioVenta":"2500","email":"soyio@","id":1}
+{"tipo":"molde","cantidad":"20","sabor":"muzza","precioVenta":"2500","email":"soyio@","id":2}

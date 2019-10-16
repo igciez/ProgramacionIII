@@ -7,19 +7,21 @@ class Vehiculo{
     public $marca;
     public $patente;
     public $kms;
+    public $foto;
 
-    function _construct($marca, $patente, $kms){
+    function _construct($marca, $patente, $kms,$foto){
         $this->marca=$marca;
         $this->patente=$patente;
         $this->kms=$kms;
+        $this->foto;
         
-        // if($foto["name"]){
-        //     $this->foto=$foto["name"];
-        //     move_uploaded_file($foto["tmp_name"],"./imagenes/".$this->foto);
-        // }
-        // else{
-        //     $this->foto=$foto["foto"];
-        // }
+        if($foto["name"]){
+            $this->foto=$foto["name"];
+            move_uploaded_file($foto["tmp_name"],"./imagenes/".$this->foto);
+        }
+        else{
+            $this->foto=$foto["foto"];
+        }
         
     }
 
@@ -30,7 +32,7 @@ class Vehiculo{
         
         //busca el valor en ambos arrays y
         //si lo encuentra devuelve el indice.
-        if(iseet($arrayDeParametrosDos)){
+        if(isset($arrayDeParametrosDos)){
             foreach($arrayDeParametrosDos as $key => $val){
                 $auxArray= (array)$val;
                 //$valorRetornado=false;
@@ -45,8 +47,8 @@ class Vehiculo{
         //si no encuentra devuelve false,
         //entonces guardo en el archivo
         if(!$valorRetornado){
-            echo ('se guardo el obj: porque no esta repetiro');
-            $this->_construct($arrayDeParametros['marca'],$arrayDeParametros['patente'],$arrayDeParametros['kms']);                
+            echo ('se guardo el obj: porque no esta repetido');
+            $this->_construct($arrayDeParametros['marca'],$arrayDeParametros['patente'],$arrayDeParametros['kms'],$arrayDeParametros['foto']);                
             guardar("vehiculos.txt", $this, "a");
         }
         else{

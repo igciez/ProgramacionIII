@@ -1,0 +1,3 @@
+{"marca":"marca","patente":"1","kms":"20","foto": "Crisantemo.jpg"}
+{"marca":"marcaDos","patente":"2","kms":"25","foto": "Crisantemo.jpg"}
+{"marca":"marcaDos","patente":"3","kms":"25","foto": "Crisantemo.jpg"}

@@ -53,6 +53,8 @@ class Servicio{
             echo('no se pudo guardar: porque el obj esta repetido o fuera de rango del "tipo"');
         }       
     }
+
+     
 }
 
 ?>

@@ -1,0 +1,9 @@
+Pasos:
+
+1) bajar vendor:
+
+composer require slim/slim "^3.12"
+
+2) .htaccess
+
+3)hacer index.php -> para slim

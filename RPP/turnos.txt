@@ -1,0 +1,3 @@
+{"fecha":"30","patente":"3","marca":"marcaDos","precio":"150","tipoServicio":"nombreServicio"}
+{"fecha":"40","patente":"4","marca":"marcaDos","precio":"250","tipoServicio":"otroServicio"}
+{"fecha":"30","patente":"1","marca":"marca","precio":"150","tipoServicio":"nombreServicio"}

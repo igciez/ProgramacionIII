@@ -1,0 +1,31 @@
+-----
+Links:
+-----
+
+https://jwt.io/ //-->cifrado
+
+https://github.com/firebase/php-jwt //-->generacion del token
+
+------
+Pasos:
+------
+1) bajar "vendor" -> link: composer require slim/slim "^3.12"
+
+3) composer require firebase/php-jwt //-->genera el token
+
+2) crear: .htaccess -> para tener ruta relativa
+
+3) Generar clases.
+
+--------
+Postman:
+--------
+Post -> body
+
+Get -> headers 
+
+------
+Notas:
+------
+
+*) error "syntax" -> actualizar Postman

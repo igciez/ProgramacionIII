@@ -205,3 +205,9 @@
 [2019-11-19 00:03:37] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2Flocalhost%2FProgramacionIII%2Fmodelo-SP%2Fpublic, RUTA=usuariosORM%2Fmateria%2F3, autoridad=localhost [] {"uid":"02377bf"}
 [2019-11-19 00:03:54] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2Flocalhost%2FProgramacionIII%2Fmodelo-SP%2Fpublic, RUTA=usuariosORM%2Fmateria%2F3, autoridad=localhost [] {"uid":"e8bd26f"}
 [2019-11-19 00:04:21] UTN FRA LOGGER.INFO: metodo=GET, URI=http%3A%2F%2Flocalhost%2FProgramacionIII%2Fmodelo-SP%2Fpublic, RUTA=usuariosORM%2Fmaterias, autoridad=localhost [] {"uid":"15cb0e5"}
+[2019-11-19 15:45:09] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2Flocalhost%2FProgramacionIII%2Fmodelo-SP%2Fpublic, RUTA=usuariosORM%2Flogin, autoridad=localhost [] {"uid":"9d69979"}
+[2019-11-19 15:45:40] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2Flocalhost%2FProgramacionIII%2Fmodelo-SP%2Fpublic, RUTA=usuariosORM%2Flogin, autoridad=localhost [] {"uid":"7ece8f2"}
+[2019-11-19 15:46:25] UTN FRA LOGGER.INFO: metodo=GET, URI=http%3A%2F%2Flocalhost%2FProgramacionIII%2Fmodelo-SP%2Fpublic, RUTA=usuariosORM%2Fmaterias%2Fid, autoridad=localhost [] {"uid":"5e06f12"}
+[2019-11-19 15:46:33] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2Flocalhost%2FProgramacionIII%2Fmodelo-SP%2Fpublic, RUTA=usuariosORM%2Flogin, autoridad=localhost [] {"uid":"9d7dfd7"}
+[2019-11-19 15:47:12] UTN FRA LOGGER.INFO: metodo=GET, URI=http%3A%2F%2Flocalhost%2FProgramacionIII%2Fmodelo-SP%2Fpublic, RUTA=usuariosORM%2Fmaterias%2F3, autoridad=localhost [] {"uid":"abdbbca"}
+[2019-11-19 15:48:03] UTN FRA LOGGER.INFO: metodo=GET, URI=http%3A%2F%2Flocalhost%2FProgramacionIII%2Fmodelo-SP%2Fpublic, RUTA=usuariosORM%2Fmateria%2F3, autoridad=localhost [] {"uid":"3388570"}

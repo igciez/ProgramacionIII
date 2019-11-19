@@ -27,6 +27,7 @@ return function (App $app) {
         $this->post('/usuario/{legajo}', usuarioControler::class . ':ModificarUno')->add(Middleware::class . ':validarRuta');
         $this->post('/materia/{idMateria}', materiaControler::class . ':InscripcionMateria')->add(Middleware::class . ':validarUsuarioAlumn');
         $this->get('/materias', materiaControler::class . ':TraerTodos')->add(Middleware::class . ':validarRuta');
+        $this->get('/materia/{id}', materiaControler::class . ':TraerUno')->add(Middleware::class . '::validarRuta');
     });
 
 };

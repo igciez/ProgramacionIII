@@ -47,6 +47,7 @@ class materiaControler implements IApiControler
         }        
         return  $newResponse;       
     }
+    
     public function TraerUno($request, $response, $args) {
         $token = $request->getHeader('token');
         $datosToken = AutentificadorJWT::ObtenerData($token[0]);

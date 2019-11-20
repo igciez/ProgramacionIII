@@ -1,0 +1,10 @@
+1) abrir xampp
+            |_ mySql -> http://localhost/phpmyadmin/
+                            |
+                            |_ Base datos-> codificacion: utf8_spanish2_ci
+                                            nombre base: en plural
+                                            Asociar al .sql en archivo settings.php
+                                            add fila : "updated_at" y "created_at" (ambos tipo date)
+
+2) postman: add /public/
+

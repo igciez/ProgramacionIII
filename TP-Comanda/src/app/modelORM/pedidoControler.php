@@ -61,8 +61,7 @@ class pedidoControler implements IApiControler
                 return $response->withJson("Pedido en preparacion. Id Mesa:". $pedido->id_mesa .", cliente:". $datos['nombreCliente'], 200);               
             }            
             return $response->withJson("No existe el empleado", 200);             
-        }
-        
+        }        
         return $response->withJson("Faltan datos o el empleado no tiene un estado activo", 200); 
     }
 
@@ -132,6 +131,5 @@ class pedidoControler implements IApiControler
         }
         return $response->withJson("No se encontró el pedido $idPedido", 200);;
     }
-
 }
 ?>

@@ -73,73 +73,7 @@ class empleadoControler implements IApiControler
         return $response->withJson("No se encontro al empleado: $id", 200);
     }
     
-    public function ModificarUno($request, $response, $args) {
-
-        // $empleadoAModificar = null;
-        // $seGuardoUsuario=false;
-        // $datosModificados = $request->getParsedBody();
-        // $archivos = $request->getUploadedFiles();
-        // // $legajo = $request->getParam('legajo'); //legajo que le paso por param
-        // $legajo = $request->getAttribute('legajo');//si se lo paso por url
-        // $token = $request->getHeader('token');
-        // $datosToken = AutentificadorJWT::ObtenerData($token[0]);
-        // $usuarioAModificar= usuario::where('legajo', $legajo)->first();
-
-        // if($usuarioAModificar != null && $datosToken->legajo == $usuarioAModificar->legajo ){ 
-        //     switch($datosToken->tipo)
-        //     {   
-        //         case 'alumno':
-        //         $usuarioAModificar->email = $datosModificados['email'];
-        //         //usuarioControler::HacerBackup(__DIR__ . "../../../../img/", $usuarioAModificar);
-        //         $usuarioAModificar->foto = usuarioControler::GuardarArchivoTemporal($archivos['foto'], __DIR__ . "../../../../img/",
-        //             $usuarioAModificar->legajo.$usuarioAModificar->tipo);
-        //         $usuarioAModificar->save();
-        //         $seGuardoUsuario=true;
-        //         break;
-
-        //         case 'profesor':
-        //         $usuarioAModificar->email = $datosModificados['email']; //se modifica el email del profesor en la tabla usuarios
-        //         profesor_materia::where('id_profesor', $usuarioAModificar->legajo)->delete();//borro todas las materias del profesor
-        //         // var_dump($datosModificados['materiasDictadas']);
-        //         foreach($datosModificados['materiasDictadas'] as $idMateria)
-        //         {//para pasar array por postman -> key = materiasDictadas[0] value = materiaUno
-        //             $materia = materia::where('nombre',$idMateria )->first();
-        //             $profesorMateria = new profesor_materia();
-        //             $profesorMateria->id_profesor = $usuarioAModificar->legajo;
-        //             $profesorMateria->id_materia = $materia['id'];
-        //             $profesorMateria->save();
-        //         }                 
-        //         $usuarioAModificar->save();
-        //         $seGuardoUsuario=true;
-        //         break;
-
-        //         case 'admin':
-        //             $usuarioAModificar->email = $datosModificados['email'];
-        //             $usuarioAModificar->foto = usuarioControler::GuardarArchivoTemporal($archivos['foto'], __DIR__ . "../../../../img/",
-        //             $usuarioAModificar->legajo.$usuarioAModificar->tipo);
-        //             foreach($datosModificados['materiasDictadas'] as $idMateria)
-        //             {
-        //                 $materia = materia::where('nombre',$idMateria )->first();
-        //                 $profesorMateria = new profesor_materia();
-        //                 $profesorMateria->id_profesor = $usuarioAModificar->legajo;
-        //                 $profesorMateria->id_materia = $materia['id'];
-        //                 $profesorMateria->save();
-        //                 $seGuardoUsuario=true;
-        //             }
-        //             $usuarioAModificar->save();
-        //         break;
-        //     }
-        // }         
-        // else
-        // {
-        //     return $response->withJson("Error, El legajo no corresponde a un usuario", 200);
-        // }
-        // if($seGuardoUsuario){
-        //     return $response->withJson("Usuario modificado correctamente", 200);
-        // }
-
-		// return 	$response->withJson("Error, el usuario no pudo guardarse, verifique el tipo de usuario", 200);
-    }
+    public function ModificarUno($request, $response, $args) {}
 
     public function SuspenderEmpleado($request, $response, $args){
         $id =  $args['id'];

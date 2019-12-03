@@ -39,7 +39,7 @@ class pedidoControler implements IApiControler
         $token = $request->getHeader('token');
         $datosToken = AutentificadorJWT::ObtenerData($token[0]);
 
-        if(isset($datos['nombrePedido'],$datos['nombreCliente']) && $datosToken->estado == 'activo')
+        if(isset($datos['nombrePedido'],$datos['nombreCliente']) && $datosToken->estado == 'activo' && $datosToken->tipo == "mozo")
         {
             $empleado= empleado::where('id',$datosToken->id);
 
@@ -56,13 +56,23 @@ class pedidoControler implements IApiControler
                 else{
                     $pedido->id_mesa = substr(md5(uniqid(rand(), true)), 0, 5);
                 }
-                $pedido->save();
-
-                return $response->withJson("Pedido en preparacion. Id Mesa:". $pedido->id_mesa .", cliente:". $datos['nombreCliente'], 200);
+                if(($datos['tipo']== 'bartender')  ||
+                ($datos['tipo']== 'cervecero')  ||
+                ($datos['tipo']== 'cocinero')  ||
+                ($datos['tipo']== 'mozo')  ||
+                ($datos['tipo']== 'socio') )
+                {
+                  $pedido->tipo = $datos['tipo'];
+                  $pedido->save();
+                  return $response->withJson("Pedido en preparacion. Id Mesa:". $pedido->id_mesa .", cliente:". $datos['nombreCliente'], 200);
+                }
+                else{
+                  return $response->withJson("Tipo de pedido invalido para Id Mesa:". $pedido->id_mesa .", cliente:". $datos['nombreCliente'], 200);
+                }
             }
             return $response->withJson("No existe el empleado ", 200);
         }
-        return $response->withJson("Faltan datos o el empleado no tiene un estado activo", 200);
+        return $response->withJson("Faltan datos o el empleado no tiene un estado activo, o no es mozo", 200);
     }
 
     public function PrepararPedido($request, $response, $args)
@@ -77,8 +87,8 @@ class pedidoControler implements IApiControler
         {
             if(isset($datos['tiempoEstimadoEnMs']))
             {
-                $pedido = pedido::where('id', $idPedido)->first();
-                if($pedido != null && $pedido['estado'] != 'Entregado' )
+                $pedido = pedido::where('id', $idPedido)->first(); ///////!!!!!!!!!!!!!!!!!!!!//////
+                if($pedido != null && $pedido['estado'] != 'Entregado' && $pedido['tipo'] == $empleado["tipo"]  )
                 {
                     $pedido->estado = 'En Preparacion';
                     $pedido->tiempo_preparacion = AutentificadorJWT::CrearToken("tiempoPreparacion", $datos['tiempoEstimadoEnMs']);
@@ -111,7 +121,7 @@ class pedidoControler implements IApiControler
         $pedido=null;
         $empleado = empleado::where('id', $datosToken->id)->first();
 
-        if($empleado != null && $empleado["estado"] == "activo" ){
+        if($empleado != null && $empleado["estado"] == "activo" && $empleado["tipo"] == "mozo"){
             $pedido = pedido::where('id', $idPedido)->first();
         }
 

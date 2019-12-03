@@ -78,7 +78,7 @@ class pedidoControler implements IApiControler
             if(isset($datos['tiempoEstimadoEnMs']))
             {
                 $pedido = pedido::where('id', $idPedido)->first();
-                if($pedido != null)
+                if($pedido != null && $pedido['estado'] != 'Entregado' )
                 {
                     $pedido->estado = 'En Preparacion';
                     $pedido->tiempo_preparacion = AutentificadorJWT::CrearToken("tiempoPreparacion", $datos['tiempoEstimadoEnMs']);
@@ -88,7 +88,7 @@ class pedidoControler implements IApiControler
                 }
                 else
                 {
-                    $newResponse = $response->withJson("No encontró el pedido $idPedido", 200);       
+                    $newResponse = $response->withJson("No encontró el pedido $idPedido,  o ya fue entregado", 200);       
                 }                
             }
             else
@@ -115,7 +115,7 @@ class pedidoControler implements IApiControler
             $pedido = pedido::where('id', $idPedido)->first();
         }      
 
-        if($pedido != null )
+        if($pedido != null && $pedido['estado'] != 'Entregado' )
         {            
             try
             {
@@ -129,7 +129,7 @@ class pedidoControler implements IApiControler
                 return $response->withJson("Pedido $idPedido Entregado", 200);
             }
         }
-        return $response->withJson("No se encontró el pedido $idPedido", 200);;
+        return $response->withJson("No se encontró el pedido $idPedido, o ya fue entregado", 200);;
     }
 }
 ?>

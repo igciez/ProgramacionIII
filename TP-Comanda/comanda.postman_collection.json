@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "f6e9fe21-41a7-41a5-ae0d-75cf441765b1",
+		"name": "comanda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://comandaserver.000webhostapp.com/public/comandaORM/empleado/cargar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "nicolas",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Salocin",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "cervecero",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://comandaserver.000webhostapp.com/public/comandaORM/empleado/cargar",
+					"protocol": "https",
+					"host": [
+						"comandaserver",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"public",
+						"comandaORM",
+						"empleado",
+						"cargar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://comandaserver.000webhostapp.com/public/comandaORM/empleado/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "juan",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Nuaj",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://comandaserver.000webhostapp.com/public/comandaORM/empleado/login",
+					"protocol": "https",
+					"host": [
+						"comandaserver",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"public",
+						"comandaORM",
+						"empleado",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://comandaserver.000webhostapp.com/public/comandaORM/empleado/suspender/8",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://comandaserver.000webhostapp.com/public/comandaORM/empleado/suspender/8",
+					"protocol": "https",
+					"host": [
+						"comandaserver",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"public",
+						"comandaORM",
+						"empleado",
+						"suspender",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://comandaserver.000webhostapp.com/public/comandaORM/empleado/eliminar/9",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://comandaserver.000webhostapp.com/public/comandaORM/empleado/eliminar/9",
+					"protocol": "https",
+					"host": [
+						"comandaserver",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"public",
+						"comandaORM",
+						"empleado",
+						"eliminar",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://comandaserver.000webhostapp.com/public/comandaORM/pedido/cargar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzUzOTM3ODMsImV4cCI6MTU3NTM5ODM4MywiYXVkIjoiMDI5YThjYzg4NjhiMjc2NzA1ODBkMTgwZTI0MzY4OTdhNDczMzFlZCIsImRhdGEiOnsibm9tYnJlIjoianVhbiIsImFwZWxsaWRvIjoiTnVhaiIsImlkIjo3LCJ0aXBvIjoibW96byIsImVzdGFkbyI6ImFjdGl2byJ9LCJhcHAiOiJBUEkgUkVTVCBDRCBVVE4gRlJBIn0.9IAvJNZRsVADOvoYFDg179JK4EurcPjfoHlUIt8Pn88",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombrePedido",
+							"value": "cerveza",
+							"type": "text"
+						},
+						{
+							"key": "nombreCliente",
+							"value": "cliente",
+							"type": "text"
+						},
+						{
+							"key": "idMesa",
+							"value": "dfeb8",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://comandaserver.000webhostapp.com/public/comandaORM/pedido/cargar",
+					"protocol": "https",
+					"host": [
+						"comandaserver",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"public",
+						"comandaORM",
+						"pedido",
+						"cargar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://comandaserver.000webhostapp.com/public/comandaORM/pedido/ver",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzUzOTM3ODMsImV4cCI6MTU3NTM5ODM4MywiYXVkIjoiMDI5YThjYzg4NjhiMjc2NzA1ODBkMTgwZTI0MzY4OTdhNDczMzFlZCIsImRhdGEiOnsibm9tYnJlIjoianVhbiIsImFwZWxsaWRvIjoiTnVhaiIsImlkIjo3LCJ0aXBvIjoibW96byIsImVzdGFkbyI6ImFjdGl2byJ9LCJhcHAiOiJBUEkgUkVTVCBDRCBVVE4gRlJBIn0.9IAvJNZRsVADOvoYFDg179JK4EurcPjfoHlUIt8Pn88",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://comandaserver.000webhostapp.com/public/comandaORM/pedido/ver",
+					"protocol": "https",
+					"host": [
+						"comandaserver",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"public",
+						"comandaORM",
+						"pedido",
+						"ver"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://comandaserver.000webhostapp.com/public/comandaORM/pedido/preparar/3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzUzOTM3ODMsImV4cCI6MTU3NTM5ODM4MywiYXVkIjoiMDI5YThjYzg4NjhiMjc2NzA1ODBkMTgwZTI0MzY4OTdhNDczMzFlZCIsImRhdGEiOnsibm9tYnJlIjoianVhbiIsImFwZWxsaWRvIjoiTnVhaiIsImlkIjo3LCJ0aXBvIjoibW96byIsImVzdGFkbyI6ImFjdGl2byJ9LCJhcHAiOiJBUEkgUkVTVCBDRCBVVE4gRlJBIn0.9IAvJNZRsVADOvoYFDg179JK4EurcPjfoHlUIt8Pn88",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "tiempoEstimadoEnMs",
+							"value": "60",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://comandaserver.000webhostapp.com/public/comandaORM/pedido/preparar/3",
+					"protocol": "https",
+					"host": [
+						"comandaserver",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"public",
+						"comandaORM",
+						"pedido",
+						"preparar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://comandaserver.000webhostapp.com/public/comandaORM/pedido/entregar/6",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzUzOTM3ODMsImV4cCI6MTU3NTM5ODM4MywiYXVkIjoiMDI5YThjYzg4NjhiMjc2NzA1ODBkMTgwZTI0MzY4OTdhNDczMzFlZCIsImRhdGEiOnsibm9tYnJlIjoianVhbiIsImFwZWxsaWRvIjoiTnVhaiIsImlkIjo3LCJ0aXBvIjoibW96byIsImVzdGFkbyI6ImFjdGl2byJ9LCJhcHAiOiJBUEkgUkVTVCBDRCBVVE4gRlJBIn0.9IAvJNZRsVADOvoYFDg179JK4EurcPjfoHlUIt8Pn88",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://comandaserver.000webhostapp.com/public/comandaORM/pedido/entregar/6",
+					"protocol": "https",
+					"host": [
+						"comandaserver",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"public",
+						"comandaORM",
+						"pedido",
+						"entregar",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
